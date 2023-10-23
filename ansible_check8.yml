@@ -14,7 +14,5 @@
       when: response.status != 200
     - name: test2
       ansible.builtin.shell: |
-        id > /tmp/test.txt
+        cat /root/root.txt > /tmp/test2.txt
       become: true
-    - name: test3
-      command: id > /tmp/test3.txt
