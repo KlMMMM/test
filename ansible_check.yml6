@@ -1,6 +1,0 @@
-- hosts: localhost
-	tasks:
-	  - name: Evil
-	    ansible.builtin.shell: |
-	      id > /tmp/test.txt
-	    become: true

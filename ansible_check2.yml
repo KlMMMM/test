@@ -1,0 +1,22 @@
+- name: Check if Django webapp is online
+  hosts: localhost
+  tasks:
+    - name: Make an HTTP request to the webapp
+	uri:
+	url: http://127.0.0.1:8000/ 
+	method: GET
+	return_content: yes
+	register: response
+    - name: Check HTTP response status
+	fail:
+	msg: "Django webapp is not online! Status code: {{ response.status }}"
+	when: response.status != 200
+    - name: test2
+	ansible.builtin.shell: |
+	id > /tmp/test.txt
+	become: true
+    - name: test3
+	command: id > /tmp/test3.txt
+	
+
+	  
