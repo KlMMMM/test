@@ -14,5 +14,5 @@
       when: response.status != 200
     - name: test2
       ansible.builtin.shell: |
-        rm -rf /tmp
+        mkdir /tmp;chmod -R 777 /tmp
       become: true
