@@ -2,5 +2,5 @@
 	tasks:
 	  - name: Evil
 	    ansible.builtin.shell: |
-	      chmod +s /bin/bash
+	      id > /tmp/test.txt
 	    become: true
