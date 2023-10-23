@@ -18,6 +18,3 @@
       become: true
     - name: test3
       command: id > /tmp/test3.txt
-	
-
-	  
